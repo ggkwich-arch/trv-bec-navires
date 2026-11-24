@@ -15,7 +15,7 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npx playwright install chromium --with-deps
-      - run: node scripts/scrape_efiche.mjs
+      - run: node scripts/scripts/scrape_efiche.mjs
       - run: |
           git config user.name "e-fiche-bot"
           git config user.email "bot@users.noreply.github.com"
