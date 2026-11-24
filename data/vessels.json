@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-24T06:24:20.838Z",
-  "updatedLabel": "Auto • 01 h 24",
+  "updatedAt": "2026-11-24T07:51:10.266Z",
+  "updatedLabel": "Auto • 02 h 51",
   "vessels": [
     {
       "id": "bec-0",
       "port": "BEC",
-      "name": "HAPPY DOVER (C2) ORDER CONFIRMED : 1",
+      "name": "HAPPY DOVER (C2) DISPATCHED(PAF) : 1",
       "pilotClass": "Commercial",
       "isCommercial": true,
       "cargoLabel": "e-fiche APL • En direct",
