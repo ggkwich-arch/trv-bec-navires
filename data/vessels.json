@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-24T13:58:36.019Z",
-  "updatedLabel": "Auto • 08 h 58",
+  "updatedAt": "2026-11-24T15:54:07.111Z",
+  "updatedLabel": "Auto • 10 h 54",
   "vessels": [
     {
       "id": "bec-0",
@@ -61,27 +61,6 @@
       "origin": "TRV19",
       "waypoint": "TRV19 - T-R B19",
       "berthCode": "TRV19",
-      "berthDesc": "Port de Trois-Rivières",
-      "progress": 55,
-      "pinned": false
-    },
-    {
-      "id": "trv-3",
-      "port": "TRV",
-      "name": "KHOI VENTURES (C1) PROSPECT : 1 PLT",
-      "pilotClass": "Commercial",
-      "isCommercial": true,
-      "cargoLabel": "e-fiche APL • En direct",
-      "movement": "departure",
-      "movementBadge": "↑ Départ 19:30",
-      "pilotStatus": "9.7",
-      "draft": "9.7 m",
-      "speed": "10h 0m nds",
-      "transit": "Email (Mouvement)\n2026-11-23 09:26",
-      "orderTime": "2026-11-24 19:30",
-      "origin": "TRV20",
-      "waypoint": "TRV20 - T-R B20",
-      "berthCode": "TRV20",
       "berthDesc": "Port de Trois-Rivières",
       "progress": 55,
       "pinned": false
