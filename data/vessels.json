@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-24T12:42:36.238Z",
-  "updatedLabel": "Auto • 07 h 42",
+  "updatedAt": "2026-11-24T13:58:36.019Z",
+  "updatedLabel": "Auto • 08 h 58",
   "vessels": [
     {
       "id": "bec-0",
@@ -14,7 +14,7 @@
       "pilotStatus": "9.23",
       "draft": "9.23 m",
       "speed": "9h 23m nds",
-      "transit": "LESSTN (Mouvement)\n2026-11-24 06:00",
+      "transit": "IBL (Mouvement)\n2026-11-24 07:50",
       "orderTime": "2026-11-24 06:01",
       "origin": "BEC5",
       "waypoint": "BEC5 - Bécancour Q/W5",
@@ -79,9 +79,9 @@
       "speed": "10h 0m nds",
       "transit": "Email (Mouvement)\n2026-11-23 09:26",
       "orderTime": "2026-11-24 19:30",
-      "origin": "TRV19",
-      "waypoint": "TRV19 - T-R B19",
-      "berthCode": "TRV19",
+      "origin": "TRV20",
+      "waypoint": "TRV20 - T-R B20",
+      "berthCode": "TRV20",
       "berthDesc": "Port de Trois-Rivières",
       "progress": 55,
       "pinned": false
