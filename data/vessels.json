@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-24T04:34:33.682Z",
-  "updatedLabel": "Auto • 23 h 34",
+  "updatedAt": "2026-11-24T05:30:24.010Z",
+  "updatedLabel": "Auto • 00 h 30",
   "vessels": [
     {
       "id": "bec-0",
@@ -35,7 +35,7 @@
       "pilotStatus": "10.58",
       "draft": "10.58 m",
       "speed": "9h 32m nds",
-      "transit": "Email (Mouvement)\n2026-11-22 07:23",
+      "transit": "66W (Mouvement)\n2026-11-23 22:50",
       "orderTime": "2026-11-24 18:20",
       "origin": "BEC4",
       "waypoint": "BEC4 - Bécancour Q/W4",
