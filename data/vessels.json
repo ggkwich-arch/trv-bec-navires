@@ -1,30 +1,9 @@
 {
-  "updatedAt": "2026-11-24T03:55:14.988Z",
-  "updatedLabel": "Auto • 22 h 55",
+  "updatedAt": "2026-11-24T04:34:33.682Z",
+  "updatedLabel": "Auto • 23 h 34",
   "vessels": [
     {
-      "id": "trv-0",
-      "port": "TRV",
-      "name": "TANJA (C1) SAILING (DDS) : 1 PLT",
-      "pilotClass": "Commercial",
-      "isCommercial": true,
-      "cargoLabel": "e-fiche APL • En direct",
-      "movement": "departure",
-      "movementBadge": "↑ Départ 11:00",
-      "pilotStatus": "10.34",
-      "draft": "10.34 m",
-      "speed": "9h 35m nds",
-      "transit": "IBL (Mouvement)\n2026-11-23 12:50",
-      "orderTime": "2026-11-23 11:00",
-      "origin": "TRV20",
-      "waypoint": "TRV20 - T-R B20",
-      "berthCode": "TRV20",
-      "berthDesc": "Port de Trois-Rivières",
-      "progress": 55,
-      "pinned": true
-    },
-    {
-      "id": "bec-1",
+      "id": "bec-0",
       "port": "BEC",
       "name": "HAPPY DOVER (C2) ORDER CONFIRMED : 1",
       "pilotClass": "Commercial",
@@ -42,10 +21,10 @@
       "berthCode": "BEC5",
       "berthDesc": "Port de Bécancour",
       "progress": 55,
-      "pinned": false
+      "pinned": true
     },
     {
-      "id": "bec-2",
+      "id": "bec-1",
       "port": "BEC",
       "name": "PORT NARA (A) PROSPECT : 1 PLT",
       "pilotClass": "Commercial",
@@ -66,7 +45,7 @@
       "pinned": false
     },
     {
-      "id": "trv-3",
+      "id": "trv-2",
       "port": "TRV",
       "name": "THEBE (B2) PROSPECT : 1 PLT",
       "pilotClass": "Commercial",
@@ -79,6 +58,27 @@
       "speed": "10h 25m nds",
       "transit": "66W (Mouvement)\n2026-11-23 18:10",
       "orderTime": "2026-11-24 18:30",
+      "origin": "TRV19",
+      "waypoint": "TRV19 - T-R B19",
+      "berthCode": "TRV19",
+      "berthDesc": "Port de Trois-Rivières",
+      "progress": 55,
+      "pinned": false
+    },
+    {
+      "id": "trv-3",
+      "port": "TRV",
+      "name": "KHOI VENTURES (C1) PROSPECT : 1 PLT",
+      "pilotClass": "Commercial",
+      "isCommercial": true,
+      "cargoLabel": "e-fiche APL • En direct",
+      "movement": "departure",
+      "movementBadge": "↑ Départ 19:30",
+      "pilotStatus": "9.7",
+      "draft": "9.7 m",
+      "speed": "10h 0m nds",
+      "transit": "Email (Mouvement)\n2026-11-23 09:26",
+      "orderTime": "2026-11-24 19:30",
       "origin": "TRV19",
       "waypoint": "TRV19 - T-R B19",
       "berthCode": "TRV19",
