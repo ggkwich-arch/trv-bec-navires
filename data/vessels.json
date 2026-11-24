@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-24T15:54:07.111Z",
-  "updatedLabel": "Auto • 10 h 54",
+  "updatedAt": "2026-11-24T16:54:32.823Z",
+  "updatedLabel": "Auto • 11 h 54",
   "vessels": [
     {
       "id": "bec-0",
@@ -35,7 +35,7 @@
       "pilotStatus": "10.58",
       "draft": "10.58 m",
       "speed": "9h 32m nds",
-      "transit": "MON (Mouvement)\n2026-11-24 05:20",
+      "transit": "MAN (Mouvement)\n2026-11-24 11:45",
       "orderTime": "2026-11-24 18:20",
       "origin": "BEC4",
       "waypoint": "BEC4 - Bécancour Q/W4",
@@ -56,7 +56,7 @@
       "pilotStatus": "9.72",
       "draft": "9.72 m",
       "speed": "10h 25m nds",
-      "transit": "MON (Mouvement)\n2026-11-24 04:55",
+      "transit": "MAN (Mouvement)\n2026-11-24 09:55",
       "orderTime": "2026-11-24 18:30",
       "origin": "TRV19",
       "waypoint": "TRV19 - T-R B19",
