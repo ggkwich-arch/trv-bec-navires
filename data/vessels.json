@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-24T11:39:56.846Z",
-  "updatedLabel": "Auto • 06 h 39",
+  "updatedAt": "2026-11-24T12:42:36.238Z",
+  "updatedLabel": "Auto • 07 h 42",
   "vessels": [
     {
       "id": "bec-0",
       "port": "BEC",
-      "name": "HAPPY DOVER (C2) DISPATCHED(PAF) : 1",
+      "name": "HAPPY DOVER (C2) SAILING (DDS) : 1 P",
       "pilotClass": "Commercial",
       "isCommercial": true,
       "cargoLabel": "e-fiche APL • En direct",
@@ -14,7 +14,7 @@
       "pilotStatus": "9.23",
       "draft": "9.23 m",
       "speed": "9h 23m nds",
-      "transit": "RASA (Ancré)\n2026-11-23 09:58",
+      "transit": "LESSTN (Mouvement)\n2026-11-24 06:00",
       "orderTime": "2026-11-24 06:01",
       "origin": "BEC5",
       "waypoint": "BEC5 - Bécancour Q/W5",
