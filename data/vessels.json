@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-25T00:10:01.118Z",
-  "updatedLabel": "Auto • 19 h 10",
+  "updatedAt": "2026-11-25T01:21:48.287Z",
+  "updatedLabel": "Auto • 20 h 21",
   "vessels": [
     {
       "id": "bec-0",
@@ -47,17 +47,17 @@
     {
       "id": "trv-2",
       "port": "TRV",
-      "name": "RF MARINA (C2) ORDER CONFIRMED : 1 P",
+      "name": "RF MARINA (C2) DISPATCHED(PAF) : 1 P",
       "pilotClass": "Commercial",
       "isCommercial": true,
       "cargoLabel": "e-fiche APL • En direct",
       "movement": "departure",
-      "movementBadge": "↑ Départ 22:30",
+      "movementBadge": "↑ Départ 23:00",
       "pilotStatus": "9.1",
       "draft": "9.1 m",
-      "speed": "8h 55m nds",
+      "speed": "9h 3m nds",
       "transit": "MAN (Mouvement)\n2026-11-24 17:40",
-      "orderTime": "2026-11-24 22:30",
+      "orderTime": "2026-11-24 23:00",
       "origin": "TRV13",
       "waypoint": "TRV13 - T-R B13",
       "berthCode": "TRV13",
