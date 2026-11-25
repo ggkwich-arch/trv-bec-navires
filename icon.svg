@@ -1,10 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#0b1528"/>
-  <rect x="28" y="28" width="456" height="456" rx="92" fill="#11203a" stroke="#38bdf8" stroke-width="12"/>
-  <polygon points="92,296 420,296 372,380 124,380" fill="#38bdf8"/>
-  <polygon points="114,358 382,358 372,384 124,384" fill="#10b981"/>
-  <rect x="144" y="216" width="92" height="80" fill="#f1f5f9"/>
-  <rect x="256" y="240" width="104" height="56" fill="#0ea5e9"/>
-  <rect x="168" y="156" width="44" height="60" fill="#38bdf8"/>
-  <rect x="84" y="412" width="344" height="20" rx="10" fill="#38bdf8" opacity="0.65"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="TRV et BEC Navires">
+  <rect width="512" height="512" rx="96" fill="#0b1528"/>
+  <circle cx="256" cy="256" r="180" fill="#38bdf8"/>
+  <polygon points="256,110 178,330 268,330" fill="#f1f5f9"/>
+  <polygon points="276,180 268,330 348,330" fill="#bae6fd"/>
+  <path d="M150 345 h212 l-28 42 a24 24 0 0 1 -20 10 h-116 a24 24 0 0 1 -20 -10 z" fill="#10b981"/>
+  <rect x="246" y="96" width="10" height="300" fill="#0b1528" opacity="0.25"/>
 </svg>

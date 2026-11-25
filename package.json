@@ -1,8 +1,1 @@
-{
-  "name": "trv-bec-navires-auto",
-  "version": "1.0.0",
-  "type": "module",
-  "dependencies": {
-    "playwright": "^1.49.0"
-  }
-}
+{"dependencies":{"playwright":"1.49.1","ws":"^8.18.0"},"description":"Robot de lecture de l'e-fiche du Pilotage Saint-Laurent (TRV & BEC) pour le site TRV & BEC Navires.","engines":{"node":">=20"},"name":"trv-bec-navires-auto","scripts":{"scrape":"node scripts/scripts/scrape_efiche.mjs","verify-ais":"node scripts/verify_ais.mjs"},"type":"module","version":"1.3.0"}
