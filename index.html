@@ -9,6 +9,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="TRV & BEC Navires" />
   <meta name="theme-color" content="#0b1528" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <meta name="description" content="Navires commerciaux — Trois-Rivières (TRV) & Bécancour (BEC), d'après l'e-fiche du Pilotage Saint-Laurent. Outil d'information seulement." />
   <title>TRV &amp; BEC Navires — e-fiche Trois-Rivières &amp; Bécancour</title>
   <link rel="manifest" href="manifest.json" />
@@ -60,13 +63,7 @@
     <!-- Hero : décor en CSS/SVG, aucune image intégrée de 1 Mo -->
     <section class="hero" aria-label="Trois-Rivières et Bécancour">
       <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice">
-          <path d="M0 120 Q 50 100 100 118 T 200 116 T 300 120 T 400 114 V 160 H 0 Z" fill="#38bdf8" opacity="0.25" />
-          <path d="M0 132 Q 60 116 120 130 T 240 128 T 400 132 V 160 H 0 Z" fill="#10b981" opacity="0.25" />
-          <polygon points="200,18 168,96 232,96" fill="#f1f5f9" opacity="0.9" />
-          <polygon points="210,44 232,96 268,96" fill="#bae6fd" opacity="0.8" />
-          <path d="M150 100 h100 l-12 18 h-76 z" fill="#10b981" opacity="0.9" />
-        </svg>
+        <img src="hero.jpg" alt="" />
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-top">
@@ -78,7 +75,7 @@
       <div class="hero-bottom">
         <div>
           <p class="kicker">Rive-Nord (TRV) &amp; Rive-Sud (BEC)</p>
-          <h1>Mouvements Commerciaux</h1>
+          <h1>Mouvements <span class="hl">Commerciaux</span></h1>
         </div>
         <div class="hero-stats">
           <div class="hero-stat green">

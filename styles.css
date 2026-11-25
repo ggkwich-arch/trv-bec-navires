@@ -1,5 +1,10 @@
-/* TRV & BEC Navires — styles autonomes (aucune dépendance externe).
- * Police système : pas de Google Fonts, donc le site fonctionne hors-ligne.
+/* TRV & BEC Navires — look d'origine restauré (version 1.4).
+ * Le design de la première version de Gordon : bleu marine profond,
+ * verre dépoli, coins généreux, police Inter, grande photo du fleuve
+ * dans l'en-tête. Les fonctions 1.3 restent : manœuvres 48 h, noms
+ * propres, vérification MarineTraffic / VesselFinder / AISStream.
+ * Police Inter via Google Fonts quand on est en ligne, repli système
+ * hors-ligne — l'appli reste utilisable sans réseau.
  */
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -22,7 +27,7 @@ html { font-size: 16px; }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: radial-gradient(circle at 50% 0%, #132544 0%, #070e1b 70%);
   min-height: 100vh;
   color: var(--text);
@@ -97,17 +102,14 @@ a { color: var(--sky); }
   border-radius: 1.5rem;
 }
 
-/* ---- Hero ---- */
+/* ---- Hero : la photo du fleuve, comme dans la première version ---- */
 .hero { position: relative; overflow: hidden; border: 1px solid rgba(100, 116, 139, 0.6); border-radius: 1.5rem; margin-bottom: 0.75rem; box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.7); }
 .hero-art {
-  height: 9rem;
-  background:
-    radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.5), transparent 55%),
-    radial-gradient(circle at 15% 90%, rgba(16, 185, 129, 0.35), transparent 50%),
-    linear-gradient(160deg, #1e3a5f, #0b1528 70%);
+  height: 11rem;
+  background: linear-gradient(160deg, #1e3a5f, #0b1528 70%);
 }
-.hero-art svg { width: 100%; height: 100%; opacity: 0.9; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(6, 12, 24, 0.95), rgba(6, 12, 24, 0.4) 60%, transparent); }
+.hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, #060c18, rgba(6, 12, 24, 0.55) 55%, transparent); }
 .hero-top { position: absolute; top: 0.75rem; left: 0.85rem; right: 0.85rem; display: flex; justify-content: space-between; gap: 0.4rem; }
 .hero-chip {
   display: inline-flex; align-items: center; gap: 0.4rem;
@@ -121,7 +123,8 @@ a { color: var(--sky); }
 }
 .hero-bottom { position: absolute; bottom: 0.75rem; left: 0.85rem; right: 0.85rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 0.5rem; }
 .hero-bottom .kicker { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(125, 211, 252, 0.9); font-weight: 600; }
-.hero-bottom h1 { margin: 0; font-size: 1.15rem; font-weight: 800; color: #fff; line-height: 1.2; }
+.hero-bottom h1 { margin: 0; font-size: 1.5rem; font-weight: 800; color: #fff; line-height: 1.1; letter-spacing: -0.02em; }
+.hero-bottom h1 .hl { color: var(--sky-soft); }
 .hero-stats { display: flex; gap: 0.4rem; }
 .hero-stat { border-radius: 0.75rem; padding: 0.3rem 0.6rem; text-align: center; }
 .hero-stat.green { background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(52, 211, 153, 0.4); }

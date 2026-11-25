@@ -1,5 +1,5 @@
-/* Service worker — TRV & BEC Navires (v8).
- * v8 = vérification MarineTraffic / VesselFinder + AISStream automatique :
+/* Service worker — TRV & BEC Navires (v9).
+ * v9 = retour au look d'origine (photo du fleuve, Inter, verre dépoli) :
  * le cache change de nom pour que les téléphones prennent la nouvelle
  * version des fichiers.
  * Stratégie :
@@ -9,13 +9,14 @@
  * - pages et ressources du site : cache d'abord, puis réseau.
  * - à chaque nouvelle version du cache, les anciens caches sont supprimés.
  */
-const CACHE = 'trv-bec-v8';
+const CACHE = 'trv-bec-v9';
 
 const PRECACHE = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './hero.jpg',
   './manifest.json',
   './icon.svg',
   './icon-192.png',

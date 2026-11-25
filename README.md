@@ -29,6 +29,19 @@ d'après l'e-fiche du Pilotage Saint-Laurent (APL).
 - Mode hors-ligne : sans réseau, les dernières données connues s'affichent avec leur date.
 - Installable sur Android (PWA).
 
+## Ce qui a changé (version 1.4.0)
+
+- **Retour au look d'origine :** le design de la première version —
+  bleu marine profond, verre dépoli, coins généreux, police Inter et
+  grande photo du fleuve dans l'en-tête (remorqueur et porte-conteneurs
+  au crépuscule, `hero.jpg`, mise en cache pour le hors-ligne). Le mot
+  « Commerciaux » est de nouveau en bleu ciel dans le titre. Rien ne
+  change côté données ou fonctionnement : manœuvres 48 h, noms propres,
+  vérification MarineTraffic / VesselFinder / AISStream. Service worker
+  passé en `trv-bec-v9` pour que les téléphones prennent le nouveau
+  style (vider le cache si l'ancien persiste). La version « carte marine »
+  préparée entre-temps n'a jamais été poussée.
+
 ## Ce qui a changé (version 1.3.0)
 
 - **Liens de vérification manuelle :** sur chaque carte de navire et de
