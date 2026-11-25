@@ -1,24 +1,109 @@
 name: Mise à jour e-fiche TRV & BEC
+
 on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
+
 permissions:
   contents: write
+  issues: write
+
+# Une seule exécution à la fois : deux robots lents ne se disputent plus le push.
+concurrency:
+  group: efiche-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v4.2.2
+
+      - uses: actions/setup-node@v4.1.0
         with:
           node-version: 20
-      - run: npm install
-      - run: npx playwright install chromium --with-deps
-      - run: node scripts/scripts/scrape_efiche.mjs
-      - run: |
+
+      # Cache des dépendances (fonctionne même sans package-lock.json au
+      # premier lancement ; le cache npm de setup-node, lui, exigerait le
+      # fichier et ferait échouer l'exécution).
+      - name: Cache node_modules
+        uses: actions/cache@v4.2.0
+        with:
+          path: node_modules
+          key: node-${{ runner.os }}-${{ hashFiles('package-lock.json', 'package.json') }}
+
+      # Cache Playwright : on ne réinstalle pas Chromium à chaque exécution.
+      - name: Cache Playwright
+        uses: actions/cache@v4.2.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json', 'package.json') }}
+
+      # npm ci exige package-lock.json. S'il n'existe pas encore (premier
+      # déploiement), on le génère une fois avec npm install — voir APPLIQUER.md.
+      - name: Installer les dépendances
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Installer Chromium (si absent du cache)
+        run: npx playwright install chromium --with-deps
+
+      - name: Lire e-fiche et mettre à jour data/vessels.json
+        timeout-minutes: 6
+        run: node scripts/scripts/scrape_efiche.mjs
+
+      # Vérification AIS (AISStream, gratuit) : écoute le flux AIS en direct
+      # sur la zone TRV / BEC et note lesquels des navires d'e-fiche sont
+      # réellement vus par AIS. La clé arrive par le secret AISSTREAM_API_KEY
+      # — elle n'apparaît JAMAIS dans les journaux (le script ne log que des
+      # compteurs). Sans secret, le script écrit un fichier « non configuré »
+      # et ne fait jamais échouer le workflow.
+      - name: Vérifier les navires par AIS (AISStream)
+        timeout-minutes: 3
+        env:
+          AISSTREAM_API_KEY: ${{ secrets.AISSTREAM_API_KEY }}
+        run: node scripts/verify_ais.mjs
+
+      - name: Publier la mise à jour
+        run: |
           git config user.name "e-fiche-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/vessels.json
-          git commit -m "Auto-update e-fiche" || exit 0
+          git add data/vessels.json data/ais_verification.json
+          git diff --cached --quiet || git commit -m "Auto-update e-fiche + vérification AIS"
+          git pull --rebase origin main || true
           git push
+
+      - name: Résumé de l'exécution
+        if: always()
+        run: |
+          {
+            echo "## Mise à jour e-fiche"
+            echo ""
+            echo "- Date : $(date -u +"%Y-%m-%d %H:%M UTC")"
+            if [ -f data/vessels.json ]; then
+              echo "- Navires dans data/vessels.json : $(python3 -c "import json; print(len(json.load(open('data/vessels.json'))['vessels']))")"
+              echo "- Dernière mise à jour : $(python3 -c "import json; print(json.load(open('data/vessels.json'))['updatedAt'])")"
+            fi
+            if [ -f data/ais_verification.json ]; then
+              echo "- Vérification AIS : $(python3 -c "import json; d=json.load(open('data/ais_verification.json')); print(d.get('status'), '-', d.get('confirmedCount'), '/', d.get('expectedCount'), 'confirmés')")"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # Alerte en cas d'échec : ouvre UNE seule issue « e-fiche : le robot a
+      # échoué » si aucune n'est déjà ouverte avec ce titre.
+      - name: Alerter en cas d'échec
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if ! gh issue list --state open --search "e-fiche : le robot a échoué" --json title --jq '.[].title' | grep -q "e-fiche"; then
+            gh issue create \
+              --title "e-fiche : le robot a échoué" \
+              --body "La mise à jour automatique d'e-fiche a échoué. Voir l'exécution : ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. Vérifier si e-fiche a changé de mise en page, puis relancer le workflow manuellement."
+          fi
