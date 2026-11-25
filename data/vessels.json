@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-24T23:17:33.695Z",
-  "updatedLabel": "Auto • 18 h 17",
+  "updatedAt": "2026-11-25T00:10:01.118Z",
+  "updatedLabel": "Auto • 19 h 10",
   "vessels": [
     {
       "id": "bec-0",
       "port": "BEC",
-      "name": "PORT NARA (A) DISPATCHED(PAF) : 1 PL",
+      "name": "PORT NARA (A) SAILING (DDS) : 1 PLT",
       "pilotClass": "Commercial",
       "isCommercial": true,
       "cargoLabel": "e-fiche APL • En direct",
@@ -14,7 +14,7 @@
       "pilotStatus": "10.58",
       "draft": "10.58 m",
       "speed": "9h 32m nds",
-      "transit": "PBV (Mouvement)\n2026-11-24 15:50",
+      "transit": "LESSTN (Mouvement)\n2026-11-24 18:20",
       "orderTime": "2026-11-24 18:20",
       "origin": "BEC4",
       "waypoint": "BEC4 - Bécancour Q/W4",
@@ -26,7 +26,7 @@
     {
       "id": "trv-1",
       "port": "TRV",
-      "name": "THEBE (B2) DISPATCHED(PAF) : 1 PLT",
+      "name": "THEBE (B2) SAILING (DDS) : 1 PLT",
       "pilotClass": "Commercial",
       "isCommercial": true,
       "cargoLabel": "e-fiche APL • En direct",
@@ -35,7 +35,7 @@
       "pilotStatus": "9.72",
       "draft": "9.72 m",
       "speed": "10h 25m nds",
-      "transit": "PBV (Mouvement)\n2026-11-24 16:15",
+      "transit": "LESSTN (Mouvement)\n2026-11-24 18:25",
       "orderTime": "2026-11-24 18:30",
       "origin": "TRV19",
       "waypoint": "TRV19 - T-R B19",
